@@ -7,9 +7,12 @@ const authRouter = Router();
 authRouter.post("/register", authController.register);
 
 
-authRouter.post("/get-me", authController.getMe);
+authRouter.get("/get-me", authController.getMe);
 
-authRouter.post("/refresh-token", authController.refreshToken);
+authRouter.get("/refresh-token", authController.refreshToken);
+
+
+authRouter.get("/logout", authController.logout);
 
 
 
